@@ -1,0 +1,39 @@
+changed  rodent 99 to 2 in excel and in trainvaln05k.txt
+
+
+changed config yolov3_.cfg --> classes=80 to 15
+							---> filters=255 to 60
+							
+							
+							
+							
+1-opossum
+2-rodent
+3-raccoon
+4-squirrel
+5-bobcat
+6-skunk
+7-dog
+8-coyote
+9-rabbit
+10-bird
+11-cat
+12-badger
+13-empty
+14-car
+15-deer
+16-fox
+
+
+
+animals.names
+animals.data
+coco folder in data
+
+
+python train.py --data cfg/animals.data --config cfg/yolov3_.cfg --weights yolov3.weights -r
+
+python detect.py cfg/yolov3_.cfg yolov3.weights data/dog.jpg data/animals.names
+
+python valid.py cfg/animals.data cfg/yolov3_.cfg yolov3.weights
+

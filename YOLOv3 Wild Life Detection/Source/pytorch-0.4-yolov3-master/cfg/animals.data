@@ -1,0 +1,6 @@
+classes=16
+train=data/coco/trainvalno5k.txt
+valid=data/coco/trainvalno5k_.txt
+names=data/animals.names
+backup=backup/
+eval=coco
